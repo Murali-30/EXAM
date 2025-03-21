@@ -1,0 +1,19 @@
+10. One-Time Pad Cipher
+#include <stdio.h>
+#include <string.h>
+
+void otpEncrypt(char text[], char key[]) {
+    for (int i = 0; text[i] != '\0'; i++)
+        text[i] = ((text[i] - 'A') ^ (key[i] - 'A')) + 'A';
+}
+
+int main() {
+    char text[100], key[100];
+    printf("Enter text: ");
+    gets(text);
+    printf("Enter key: ");
+    gets(key);
+    otpEncrypt(text, key);
+    printf("Encrypted Text: %s\n", text);
+    return 0;
+}
