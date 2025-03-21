@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+char keyTable[5][5] = {
+    {'M', 'F', 'H', 'I', 'K'},
+    {'U', 'N', 'O', 'P', 'Q'},
+    {'Z', 'V', 'W', 'X', 'Y'},
+    {'E', 'L', 'A', 'R', 'G'},
+    {'D', 'S', 'T', 'B', 'C'}
+};
+void encrypt(char text[]) {
+    printf("Encryption process using Playfair Cipher\n");
+}
+int main() {
+    char text[100];
+    printf("Enter the text: ");
+    gets(text);
+    encrypt(text);
+    return 0;
+}
