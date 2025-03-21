@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+char map[26] = {'Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'};
+void encrypt(char text[]) {
+    for (int i = 0; text[i] != '\0'; i++) {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+            text[i] = map[text[i] - 'A'];
+    }
+}
+int main() {
+    char text[100];
+    printf("Enter the text: ");
+    gets(text);
+    encrypt(text);
+    printf("Encrypted Text: %s\n", text);
+    return 0;
+}
