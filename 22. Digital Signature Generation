@@ -1,0 +1,14 @@
+22. Digital Signature Generation
+#include <stdio.h>
+
+void generateSignature(char text[]) {
+    printf("Digital Signature: %s\n", text); // Placeholder
+}
+
+int main() {
+    char text[100];
+    printf("Enter text to sign: ");
+    gets(text);
+    generateSignature(text);
+    return 0;
+}
