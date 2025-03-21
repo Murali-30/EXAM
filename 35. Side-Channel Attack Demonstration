@@ -1,0 +1,11 @@
+35. Side-Channel Attack Demonstration
+#include <stdio.h>
+
+void sideChannelAttack() {
+    printf("Demonstrating Side-Channel Attack...\n");
+}
+
+int main() {
+    sideChannelAttack();
+    return 0;
+}
