@@ -1,0 +1,14 @@
+21. MD5 Hashing
+#include <stdio.h>
+
+void md5Hash(char text[]) {
+    printf("MD5 Hash Generated: %s\n", text); // Placeholder
+}
+
+int main() {
+    char text[100];
+    printf("Enter text: ");
+    gets(text);
+    md5Hash(text);
+    return 0;
+}
