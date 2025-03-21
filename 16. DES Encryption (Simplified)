@@ -1,0 +1,15 @@
+16. DES Encryption (Simplified)
+#include <stdio.h>
+#include <string.h>
+
+void desEncrypt(char text[]) {
+    printf("Encrypted message using DES: %s\n", text); // Placeholder
+}
+
+int main() {
+    char text[100];
+    printf("Enter message: ");
+    gets(text);
+    desEncrypt(text);
+    return 0;
+}
