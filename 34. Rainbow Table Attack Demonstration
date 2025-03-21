@@ -1,0 +1,11 @@
+34. Rainbow Table Attack Demonstration
+#include <stdio.h>
+
+void rainbowTableAttack() {
+    printf("Demonstrating Rainbow Table Attack...\n");
+}
+
+int main() {
+    rainbowTableAttack();
+    return 0;
+}
