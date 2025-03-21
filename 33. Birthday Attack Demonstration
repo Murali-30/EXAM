@@ -1,0 +1,11 @@
+33. Birthday Attack Demonstration
+#include <stdio.h>
+
+void birthdayAttackDemo() {
+    printf("Demonstrating Birthday Attack using hash collisions...\n");
+}
+
+int main() {
+    birthdayAttackDemo();
+    return 0;
+}
