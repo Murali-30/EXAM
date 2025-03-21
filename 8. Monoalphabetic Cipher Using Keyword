@@ -1,0 +1,27 @@
+8. Monoalphabetic Cipher Using Keyword
+#include <stdio.h>
+#include <string.h>
+
+void generateCipher(char key[]) {
+    char alphabet[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char cipher[26];
+    int i, j, index = 0;
+
+    for (i = 0; key[i] != '\0'; i++)
+        if (!strchr(cipher, key[i]))
+            cipher[index++] = key[i];
+
+    for (i = 0; i < 26; i++)
+        if (!strchr(cipher, alphabet[i]))
+            cipher[index++] = alphabet[i];
+
+    printf("Cipher Alphabet: %s\n", cipher);
+}
+
+int main() {
+    char key[100];
+    printf("Enter keyword: ");
+    gets(key);
+    generateCipher(key);
+    return 0;
+}
