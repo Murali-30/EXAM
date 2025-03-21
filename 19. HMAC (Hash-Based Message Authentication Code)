@@ -1,0 +1,21 @@
+19. HMAC (Hash-Based Message Authentication Code)
+#include <stdio.h>
+#include <string.h>
+
+unsigned long hash(char *str) {
+    unsigned long hash = 5381;
+    int c;
+    while ((c = *str++))
+        hash = ((hash << 5) + hash) + c;
+    return hash;
+}
+
+int main() {
+    char message[100], key[100];
+    printf("Enter message: ");
+    gets(message);
+    printf("Enter key: ");
+    gets(key);
+    printf("HMAC: %lu\n", hash(message) ^ hash(key));
+    return 0;
+}
