@@ -1,0 +1,21 @@
+25. Simple XOR Encryption
+#include <stdio.h>
+#include <string.h>
+
+void xorEncryptDecrypt(char text[], char key) {
+    for (int i = 0; text[i] != '\0'; i++)
+        text[i] ^= key;
+}
+
+int main() {
+    char text[100], key;
+    printf("Enter message: ");
+    gets(text);
+    printf("Enter key (single character): ");
+    scanf("%c", &key);
+    xorEncryptDecrypt(text, key);
+    printf("Encrypted Text: %s\n", text);
+    xorEncryptDecrypt(text, key);  // Decrypting
+    printf("Decrypted Text: %s\n", text);
+    return 0;
+}
