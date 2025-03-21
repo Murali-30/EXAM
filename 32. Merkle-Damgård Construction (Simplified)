@@ -1,0 +1,14 @@
+32. Merkle-Damgård Construction (Simplified)
+#include <stdio.h>
+
+void hashFunction(char text[]) {
+    printf("Hashed output using Merkle-Damgård: %s\n", text); // Placeholder
+}
+
+int main() {
+    char text[100];
+    printf("Enter text: ");
+    gets(text);
+    hashFunction(text);
+    return 0;
+}
