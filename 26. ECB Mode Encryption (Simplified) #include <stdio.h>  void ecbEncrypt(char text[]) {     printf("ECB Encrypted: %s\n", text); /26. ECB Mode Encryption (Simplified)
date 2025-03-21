@@ -1,0 +1,14 @@
+26. ECB Mode Encryption (Simplified)
+#include <stdio.h>
+
+void ecbEncrypt(char text[]) {
+    printf("ECB Encrypted: %s\n", text); // Placeholder
+}
+
+int main() {
+    char text[100];
+    printf("Enter text: ");
+    gets(text);
+    ecbEncrypt(text);
+    return 0;
+}
