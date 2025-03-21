@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void cfbEncrypt(char text[]) {
+    printf("CFB Encrypted: %s\n", text); // Placeholder
+}
+
+int main() {
+    char text[100];
+    printf("Enter text: ");
+    gets(text);
+    cfbEncrypt(text);
+    return 0;
+}
