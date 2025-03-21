@@ -1,0 +1,29 @@
+17. 3DES Encryption
+
+#include <stdio.h>
+
+#include <string.h>
+
+
+
+void tripleDesEncrypt(char text[]) {
+
+    printf("Encrypted message using 3DES: %s\n", text); // Placeholder
+
+}
+
+
+
+int main() {
+
+    char text[100];
+
+    printf("Enter message: ");
+
+    gets(text);
+
+    tripleDesEncrypt(text);
+
+    return 0;
+
+}
