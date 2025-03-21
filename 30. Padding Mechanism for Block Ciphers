@@ -1,0 +1,20 @@
+30. Padding Mechanism for Block Ciphers
+#include <stdio.h>
+#include <string.h>
+
+void addPadding(char text[], int blockSize) {
+    int len = strlen(text);
+    int pad = blockSize - (len % blockSize);
+    for (int i = 0; i < pad; i++)
+        text[len + i] = pad;
+    text[len + pad] = '\0';
+}
+
+int main() {
+    char text[100];
+    printf("Enter text: ");
+    gets(text);
+    addPadding(text, 8);
+    printf("Padded Text: %s\n", text);
+    return 0;
+}
