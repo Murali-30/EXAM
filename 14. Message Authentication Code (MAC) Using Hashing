@@ -1,0 +1,19 @@
+14. Message Authentication Code (MAC) Using Hashing
+#include <stdio.h>
+#include <string.h>
+
+unsigned long hash(char *str) {
+    unsigned long hash = 5381;
+    int c;
+    while ((c = *str++))
+        hash = ((hash << 5) + hash) + c;
+    return hash;
+}
+
+int main() {
+    char message[100];
+    printf("Enter message: ");
+    gets(message);
+    printf("MAC Hash: %lu\n", hash(message));
+    return 0;
+}
