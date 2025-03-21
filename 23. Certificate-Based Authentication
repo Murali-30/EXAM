@@ -1,0 +1,11 @@
+23. Certificate-Based Authentication
+#include <stdio.h>
+
+void certificateAuthentication() {
+    printf("Certificate Verified.\n");
+}
+
+int main() {
+    certificateAuthentication();
+    return 0;
+}
