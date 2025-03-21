@@ -1,0 +1,21 @@
+24. Secure Hashing with Salting
+#include <stdio.h>
+#include <string.h>
+
+unsigned long hashWithSalt(char *str, char *salt) {
+    unsigned long hash = 5381;
+    int c;
+    while ((c = *str++))
+        hash = ((hash << 5) + hash) + c;
+    while ((c = *salt++))
+        hash = ((hash << 5) + hash) + c;
+    return hash;
+}
+
+int main() {
+    char password[100], salt[] = "RANDOM";
+    printf("Enter password: ");
+    gets(password);
+    printf("Salted Hash: %lu\n", hashWithSalt(password, salt));
+    return 0;
+}
