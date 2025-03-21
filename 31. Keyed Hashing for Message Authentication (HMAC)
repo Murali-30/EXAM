@@ -1,0 +1,23 @@
+31. Keyed Hashing for Message Authentication (HMAC)
+#include <stdio.h>
+#include <string.h>
+
+unsigned long hmac(char *message, char *key) {
+    unsigned long hash = 5381;
+    int c;
+    while ((c = *message++))
+        hash = ((hash << 5) + hash) + c;
+    while ((c = *key++))
+        hash = ((hash << 5) + hash) + c;
+    return hash;
+}
+
+int main() {
+    char message[100], key[100];
+    printf("Enter message: ");
+    gets(message);
+    printf("Enter key: ");
+    gets(key);
+    printf("HMAC Hash: %lu\n", hmac(message, key));
+    return 0;
+}
